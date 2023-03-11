@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let p = new  Promise(function(resolve,reject){
+      document.write("Pendding.....")
+       setTimeout(()=>{
+
+        let a = 1+2
+      if(a==3){
+        resolve("success");
+      }
+else {
+    reject("failed");
+}
+},3000)
+});
+   
+let onFullFill =(msg) =>{
+    document.write(msg+ "..Promiss FullFilled")
+}
+let onReject =(msg) =>{
+    document.write(msg+"   Promiss Reejected..")
+}
+p.then(onFullFill).catch(onReject)
+       
+//  p.then((msg)=>{
+//  document.write(msg+".Promiss Fullfilled.")
+//  }).catch((msg)=>{
+//     document.write(msg+"Promiss Reejected..")
+//  })
+       
+    </script>
+</body>
+</html>
