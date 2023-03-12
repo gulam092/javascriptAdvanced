@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+
+ async function callfunc(){
+    console.log("Hello 1")
+   const data = 
+   await fetch("https://jsonplaceholder.typicode.com/posts")
+    console.log("Hello 2")
+    const post =await data.json()
+    console.log("Hello 3")
+
+   return post;
+ }
+
+  let a = callfunc();
+console.log(a);
+  console.log("Hello 4")
+  console.log("Hello 5")
+    //  async function example(){
+    //     console.log("Hello 1")
+    //    await console.log("Hello 2")
+    //     console.log("Hello 3")
+    //  }
+    //  example();
+    //  console.log("Hello 4")
+    //  console.log("Hello 5")
+    </script>
+
+</body>
+</html>
